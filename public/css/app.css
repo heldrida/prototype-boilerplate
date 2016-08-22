@@ -11,9 +11,17 @@
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans';
 .logo-frmwrks-module {
   width: 100px;
   height: 100px;
   margin: 50px auto; }
+  .logo-frmwrks-module * {
+    font-family: 'Droid Sans', sans-serif; }
+  .logo-frmwrks-module > div {
+    margin-bottom: 60px; }
+    .logo-frmwrks-module > div h3 {
+      color: #aaa;
+      margin-bottom: 30px; }
 
 /*# sourceMappingURL=app.css.map */

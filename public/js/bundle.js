@@ -62,10 +62,16 @@
 
 		init: function () {
 
-			new Vivus('logo-frmwrks', {
-				type: 'scenario',
-				duration: 300,
-				pathTimingFunction: Vivus.EASE
+			['logo-frmwrks1', 'logo-frmwrks2'].forEach(function (v) {
+
+				console.log(v);
+
+				new Vivus(v, {
+					type: 'scenario',
+					duration: 300,
+					pathTimingFunction: Vivus.EASE
+				});
+
 			});
 
 		}

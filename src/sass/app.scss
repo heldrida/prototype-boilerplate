@@ -1,4 +1,5 @@
 @import "css3-mixins-lib";
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans';
 
 body {
 
@@ -8,6 +9,16 @@ body {
 	width: 100px;
 	height: 100px;
 	margin: 50px auto;
+	* {
+		font-family: 'Droid Sans', sans-serif;
+	}
+	> div {
+		margin-bottom: 60px;
+		h3 {
+			color: #aaa;
+			margin-bottom: 30px;
+		}
+	}
 }
 
 @media screen and (min-width: 1025px) {
