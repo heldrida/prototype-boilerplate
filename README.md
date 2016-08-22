@@ -1,6 +1,6 @@
-# Prototype boilerplate
+# Logo Prototype
 
-A Prototyping boilerplate implemented on Gulp Webpack Sass Karma Jasmine, for use in prototyping small apps or modules.
+A prototype project for a client logo in SVG that'll be animated.
 
 ```
 Dependencies installation:
