@@ -31,7 +31,7 @@ gulp.task('watch', function() {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
     gulp.watch("./**/*.html", ['reload']);
     gulp.watch("./src/js/**/*.js", ['reload']);
-	gulp.watch('./src/**/*.js', ['test']);
+	// gulp.watch('./src/**/*.js', ['test']);
 	gulp.watch('./src/**/*.js', ['webpack']);
 });
 
@@ -39,12 +39,12 @@ gulp.task('reload', function() {
     browserSync.reload();
 });
 
-gulp.task('test', function (done) {
-  new KarmaServer({
-    configFile: __dirname +  '/karma.conf.js',
-    singleRun: true
-  }, done).start();
-});
+// gulp.task('test', function (done) {
+//   new KarmaServer({
+//     configFile: __dirname +  '/karma.conf.js',
+//     singleRun: true
+//   }, done).start();
+// });
 
 gulp.task('serve', ['watch'], function() {
 
@@ -57,6 +57,6 @@ gulp.task('serve', ['watch'], function() {
 
 });
 
-gulp.task('build', ['test', 'webpack', 'sass']);
+gulp.task('build', ['webpack', 'sass']);
 
 gulp.task('default', ['serve']);

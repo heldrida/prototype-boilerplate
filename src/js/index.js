@@ -1,3 +1,3 @@
-var ExampleModule = require('./ExampleModule.js');
+var LogoModule = require('./LogoModule.js');
 
-window.exampleModule = new ExampleModule();
+window.logoModule = new LogoModule();
