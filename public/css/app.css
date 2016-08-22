@@ -11,15 +11,24 @@
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
-@import 'https://fonts.googleapis.com/css?family=Droid+Sans';
+@import 'https://fonts.googleapis.com/css?family=Baloo+Chettan';
+* {
+  font-family: 'Baloo Chettan', sans-serif; }
+
+h1 {
+  margin: 50px;
+  letter-spacing: 1px; }
+
 .logo-frmwrks-module {
-  width: 100px;
-  height: 100px;
+  width: 100vw;
+  height: 100vh;
   margin: 50px auto; }
-  .logo-frmwrks-module * {
-    font-family: 'Droid Sans', sans-serif; }
   .logo-frmwrks-module > div {
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 50px; }
     .logo-frmwrks-module > div h3 {
       color: #aaa;
       margin-bottom: 30px; }
