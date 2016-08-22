@@ -14,7 +14,7 @@ gulp.task("webpack", function() {
     return gulp.src('./src/js/index.js')
     .pipe(rename('bundle.js'))
     .pipe( gulpWebpack(webpackConfig, webpack) )
-    .pipe(gulp.dest('./dist/js/'));
+    .pipe(gulp.dest('./public/js/'));
 });
 
 gulp.task('sass', function() {
@@ -23,7 +23,7 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./public/css'))
         .pipe(browserSync.stream());
 });
 
