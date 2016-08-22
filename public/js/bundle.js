@@ -66,7 +66,7 @@
 			var containers = document.querySelectorAll('.logo-frmwrks-module > div');
 			var i = 0;
 
-			['logo-frmwrks1', 'logo-frmwrks2', 'logo-frmwrks3', 'logo-frmwrks4'].forEach(function (v) {
+			['logo-frmwrks1', 'logo-frmwrks2', 'logo-frmwrks3', 'logo-frmwrks4', , 'logo-frmwrks5'].forEach(function (v) {
 
 				(function (delay, i) {
 
