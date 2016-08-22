@@ -9,9 +9,9 @@ LogoModule.prototype = {
 	init: function () {
 
 		new Vivus('logo-frmwrks', {
-			type: 'oneByOne',
-			duration: 200,
-			pathTimingFunction: Vivus.EASE_IN
+			type: 'scenario',
+			duration: 300,
+			pathTimingFunction: Vivus.EASE
 		});
 
 	}
