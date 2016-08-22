@@ -62,7 +62,7 @@
 
 		init: function () {
 
-			['logo-frmwrks1', 'logo-frmwrks2'].forEach(function (v) {
+			['logo-frmwrks1', 'logo-frmwrks2', 'logo-frmwrks3', 'logo-frmwrks4'].forEach(function (v) {
 
 				console.log(v);
 
