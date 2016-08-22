@@ -62,15 +62,31 @@
 
 		init: function () {
 
+			var delay = 0;
+			var containers = document.querySelectorAll('.logo-frmwrks-module > div');
+			var i = 0;
+
 			['logo-frmwrks1', 'logo-frmwrks2', 'logo-frmwrks3', 'logo-frmwrks4'].forEach(function (v) {
 
-				console.log(v);
+				(function (delay, i) {
 
-				new Vivus(v, {
-					type: 'scenario',
-					duration: 300,
-					pathTimingFunction: Vivus.EASE
-				});
+					// delay the calls to see the different animations
+					setTimeout(function () {
+
+						containers[i].style.opacity = 1;
+
+						new Vivus(v, {
+							type: 'scenario',
+							duration: 300,
+							pathTimingFunction: Vivus.EASE
+						});
+
+					}, delay);
+
+				}(delay, i));
+
+				delay += 2000;
+				i += 1;
 
 			});
 

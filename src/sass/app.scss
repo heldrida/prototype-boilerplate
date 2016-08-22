@@ -21,6 +21,9 @@ h1 {
 		height: 100px;
 		display: inline-block;
 		margin: 50px;
+		opacity: 0;
+		@include transition(all 0.3s);
+
 		h3 {
 			color: #aaa;
 			margin-bottom: 30px;

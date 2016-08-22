@@ -28,7 +28,14 @@ h1 {
     width: 100px;
     height: 100px;
     display: inline-block;
-    margin: 50px; }
+    margin: 50px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -khtml-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
     .logo-frmwrks-module > div h3 {
       color: #aaa;
       margin-bottom: 30px; }
