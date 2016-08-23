@@ -13,6 +13,8 @@ LogoCanvasModule.prototype = {
 		var width = frmwrksLogoCanvas1.width / 2;
 		var lineWidth = 3;
 
+		ctx1.translate(0.5, 0.5);
+
 		//draw a circle
 		ctx1.beginPath();
 		ctx1.arc(width, width, width - lineWidth, 0, Math.PI * 2, false);
@@ -23,26 +25,26 @@ LogoCanvasModule.prototype = {
 		ctx1.stroke();
 
 		// line A
-		ctx1.beginPath();
-		ctx1.lineWidth = 2;
+		// ctx1.beginPath();
+		ctx1.lineWidth = 3;
 
-		ctx1.moveTo(22, 83);
-		ctx1.lineTo(63, 27);
+		ctx1.moveTo(22, 82);
+		ctx1.lineTo(62, 26);
 
 		// line B
-		ctx1.lineTo(63, 7);
+		ctx1.lineTo(62, 10);
 
 		// line C
-		ctx1.lineTo(50, 27);
+		ctx1.lineTo(50, 26);
 
 		// line d
 		ctx1.lineTo(50, 74);
 
 		// line e
-		ctx1.lineTo(37, 93);
+		ctx1.lineTo(36, 89);
 
 		// line f
-		ctx1.lineTo(37, 74);
+		ctx1.lineTo(36, 74);
 
 		// line g
 		ctx1.lineTo(78, 18);
