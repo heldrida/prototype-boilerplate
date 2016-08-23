@@ -118,44 +118,51 @@
 			var width = frmwrksLogoCanvas1.width / 2;
 			var lineWidth = 3;
 
-			ctx1.translate(0.5, 0.5);
+			var render = function () {
+				ctx1.translate(0.5, 0.5);
 
-			//draw a circle
-			ctx1.beginPath();
-			ctx1.arc(width, width, width - lineWidth, 0, Math.PI * 2, false);
-			ctx1.lineWidth = lineWidth;
+				//draw a circle
+				ctx1.beginPath();
+				ctx1.arc(width, width, width - lineWidth, 0, Math.PI * 2, false);
+				ctx1.lineWidth = lineWidth;
 
-			// line color
-			ctx1.strokeStyle = 'black';
-			ctx1.stroke();
+				// line color
+				ctx1.strokeStyle = 'black';
+				ctx1.stroke();
 
-			// line A
-			ctx1.beginPath();
-			ctx1.lineWidth = lineWidth;
+				// line a
+				ctx1.beginPath();
+				ctx1.lineWidth = lineWidth;
 
-			ctx1.moveTo(22, 82);
-			ctx1.lineTo(62, 26);
+				ctx1.moveTo(22, 82);
+				ctx1.lineTo(62, 26);
 
-			// line B
-			ctx1.lineTo(62, 10);
+				// line b
+				ctx1.lineTo(62, 10);
 
-			// line C
-			ctx1.lineTo(50, 26);
+				// line c
+				ctx1.lineTo(50, 26);
 
-			// line d
-			ctx1.lineTo(50, 74);
+				// line d
+				ctx1.lineTo(50, 74);
 
-			// line e
-			ctx1.lineTo(36, 89);
+				// line e
+				ctx1.lineTo(36, 89);
 
-			// line f
-			ctx1.lineTo(36, 74);
+				// line f
+				ctx1.lineTo(36, 74);
 
-			// line g
-			ctx1.lineTo(78, 18);
+				// line g
+				ctx1.lineTo(78, 18);
 
-			// finish path
-			ctx1.stroke();
+				// finish path
+				ctx1.stroke();
+
+				//requestAnimationFrame(render);
+			}
+
+			// start
+			render();
 
 		}
 

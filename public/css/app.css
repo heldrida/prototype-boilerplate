@@ -40,4 +40,10 @@ h1 {
       color: #aaa;
       margin-bottom: 30px; }
 
+.frmwrks-logo-points-module {
+  margin: 50px; }
+  .frmwrks-logo-points-module h3 {
+    color: #0cf;
+    opacity: 0.6; }
+
 /*# sourceMappingURL=app.css.map */
