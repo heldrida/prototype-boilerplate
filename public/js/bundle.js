@@ -130,8 +130,8 @@
 			ctx1.stroke();
 
 			// line A
-			// ctx1.beginPath();
-			ctx1.lineWidth = 3;
+			ctx1.beginPath();
+			ctx1.lineWidth = lineWidth;
 
 			ctx1.moveTo(22, 82);
 			ctx1.lineTo(62, 26);
