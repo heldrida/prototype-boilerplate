@@ -159,6 +159,9 @@
 				ctx1.stroke();
 
 				//requestAnimationFrame(render);
+				//
+				// read:
+				// http://stackoverflow.com/questions/30137696/draw-a-line-with-pixi-and-move-it-with-tweenmax
 			}
 
 			// start
