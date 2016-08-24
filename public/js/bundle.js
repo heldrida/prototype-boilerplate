@@ -113,62 +113,97 @@
 
 		init: function () {
 
-			var frmwrksLogoCanvas1 = document.querySelector('.frmwrks-logo-canvas-1');
-			var ctx1 = frmwrksLogoCanvas1.getContext("2d");
-			var width = frmwrksLogoCanvas1.width / 2;
+			var canvas = document.querySelector('.frmwrks-logo-canvas-1');
+			var ctx = canvas.getContext("2d");
+			var width = canvas.width / 2;
 			var lineWidth = 3;
+			var points = {
+				a: {
+					x: -50,
+					y: 100
+				},
+				b: {
+					x: 10,
+					y: 50
+				},
+				c: {
+					x: 0,
+					y: -110
+				},
+				d: {
+					x: 50,
+					y: 150
+				},
+				e: {
+					x: -50,
+					y: 50
+				},
+				f: {
+					x: -100,
+					y: 100
+				},
+				g: {
+					x: -50,
+					y: -10
+				}
+			};
+
 
 			var render = function () {
-				ctx1.translate(0.5, 0.5);
+				ctx.clearRect(0, 0, 100, 100);
 
 				//draw a circle
-				ctx1.beginPath();
-				ctx1.arc(width, width, width - lineWidth, 0, Math.PI * 2, false);
-				ctx1.lineWidth = lineWidth;
+				ctx.beginPath();
+				ctx.arc(width, width, width - lineWidth, 0, Math.PI * 2, false);
+				ctx.lineWidth = lineWidth;
 
 				// line color
-				ctx1.strokeStyle = 'black';
-				ctx1.stroke();
+				ctx.strokeStyle = 'black';
+				ctx.stroke();
 
 				// line a
-				ctx1.beginPath();
-				ctx1.lineWidth = lineWidth;
+				ctx.beginPath();
+				ctx.lineWidth = lineWidth;
 
-				ctx1.moveTo(22, 82);
-				ctx1.lineTo(62, 26);
+				ctx.moveTo(22, 82);
+				// 62, 26
+				ctx.lineTo(Math.min(points.a.x++, 62), Math.min(points.a.y++, 26));
 
 				// line b
-				ctx1.lineTo(62, 10);
+				// 62, 10;
+				ctx.lineTo(Math.min(points.b.x++, 62), Math.min(points.b.y++, 10));
 
 				// line c
-				ctx1.lineTo(50, 26);
+				// 50, 26
+				ctx.lineTo(Math.min(points.c.x++, 50), Math.min(points.c.y++, 26));
 
 				// line d
-				ctx1.lineTo(50, 74);
+				// 50, 74
+				ctx.lineTo(Math.min(points.d.x++, 50), Math.min(points.d.y++, 74));
 
 				// line e
-				ctx1.lineTo(36, 89);
+				// 36, 89
+				ctx.lineTo(Math.min(points.e.x++, 36), Math.min(points.e.y++, 89));
 
 				// line f
-				ctx1.lineTo(36, 74);
+				// 36, 74
+				ctx.lineTo(Math.min(points.f.x++, 36), Math.min(points.f.y++, 74));
 
 				// line g
-				ctx1.lineTo(78, 18);
+				// 78, 18
+				ctx.lineTo(Math.min(points.g.x++, 78), Math.min(points.g.y++, 18));
 
 				// finish path
-				ctx1.stroke();
+				ctx.stroke();
 
-				//requestAnimationFrame(render);
-				//
-				// read:
-				// http://stackoverflow.com/questions/30137696/draw-a-line-with-pixi-and-move-it-with-tweenmax
+				requestAnimationFrame(render);
+
 			}
 
 			// start
 			render();
 
 		}
-
 	};
 
 	module.exports = LogoCanvasModule;
