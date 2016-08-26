@@ -119,32 +119,32 @@
 			var lineWidth = 3;
 			var points = {
 				a: {
-					x: -50,
-					y: 100
+					x: 62,
+					y: 26
 				},
 				b: {
-					x: 10,
-					y: 50
+					x: 52,
+					y: 20
 				},
 				c: {
-					x: 0,
-					y: -110
+					x: 20,
+					y: 26
 				},
 				d: {
-					x: 50,
-					y: 150
+					x: 80,
+					y: 74
 				},
 				e: {
-					x: -50,
-					y: 50
+					x: 56,
+					y: 65
 				},
 				f: {
-					x: -100,
-					y: 100
+					x: 36,
+					y: 74
 				},
 				g: {
-					x: -50,
-					y: -10
+					x: 26,
+					y: 79
 				}
 			};
 
@@ -171,19 +171,27 @@
 
 				// line b
 				// 62, 10;
-				ctx.lineTo(Math.min(points.b.x++, 62), Math.min(points.b.y++, 10));
+				points.b.x += 0.05;
+				points.b.y -= 0.05;
+				ctx.lineTo(Math.min(points.b.x, 62), Math.max(points.b.y, 10));
 
 				// line c
 				// 50, 26
-				ctx.lineTo(Math.min(points.c.x++, 50), Math.min(points.c.y++, 26));
+				points.c.x += 0.028;
+				points.c.y += 0.05;
+				ctx.lineTo(Math.min(points.c.x, 50), Math.min(points.c.y, 26));
 
 				// line d
 				// 50, 74
-				ctx.lineTo(Math.min(points.d.x++, 50), Math.min(points.d.y++, 74));
+				points.d.x -= 0.041;
+				points.d.y += 0.05;
+				ctx.lineTo(Math.max(points.d.x, 50), Math.min(points.d.y++, 74));
 
 				// line e
 				// 36, 89
-				ctx.lineTo(Math.min(points.e.x++, 36), Math.min(points.e.y++, 89));
+				points.e.x -= 0.04;
+				points.e.y += 0.04;
+				ctx.lineTo(Math.max(points.e.x, 36), Math.min(points.e.y, 89));
 
 				// line f
 				// 36, 74
@@ -191,7 +199,7 @@
 
 				// line g
 				// 78, 18
-				ctx.lineTo(Math.min(points.g.x++, 78), Math.min(points.g.y++, 18));
+				ctx.lineTo(78, 18);
 
 				// finish path
 				ctx.stroke();
