@@ -1,5 +1,3 @@
-var LogoModule = require('./LogoModule.js');
-var LogoCanvasModule = require('./LogoCanvasModule.js');
+var Foobar = require('./Foobar.js');
 
-window.logoModule = new LogoModule();
-window.LogoCanvasModule = new LogoCanvasModule();
+window.Foobar = new Foobar();
